@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Francisco.dev | Desarrollador de Software</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23FF7A00'/%3E%3Cstop offset='50%25' stop-color='%23FF3D32'/%3E%3Cstop offset='100%25' stop-color='%23FF176B'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%23100910'/%3E%3Crect x='2' y='2' width='60' height='60' rx='14' fill='none' stroke='url(%23g)' stroke-width='3'/%3E%3Ctext x='50%25' y='53%25' dominant-baseline='middle' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-weight='900' font-size='32' fill='url(%23g)'%3EF.%3C/text%3E%3C/svg%3E">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background:
+        radial-gradient(ellipse at 80% 10%, rgba(255, 61, 50, 0.14), transparent 35%),
+        radial-gradient(ellipse at 10% 60%, rgba(255, 23, 107, 0.11), transparent 35%),
+        #100910;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #FF7A00, #FF3D32, #FF176B);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .gradient-border {
+      border: 1px solid rgba(255, 122, 0, 0.28);
+    }
+
+    .glow-button {
+      background: linear-gradient(100deg, #FF7A00, #FF3D32, #FF176B);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .glow-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 30px rgba(255, 61, 50, 0.45);
+    }
+
+    .hero-glow {
+      background: radial-gradient(circle, rgba(255, 61, 50, 0.25), transparent 70%);
+    }
+  </style>
+</head>
+
+<body class="text-white font-sans antialiased selection:bg-orange-500 selection:text-white">
+
+  <header class="fixed top-0 left-0 w-full z-50 bg-[#100910]/85 backdrop-blur-xl border-b border-white/10">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#inicio" class="text-2xl font-black tracking-tight text-white">
+        Francisco<span class="gradient-text">.dev</span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+        <a href="#inicio" class="hover:text-orange-400 transition">Inicio</a>
+        <a href="#sobre-mi" class="hover:text-orange-400 transition">Sobre mí</a>
+        <a href="#habilidades" class="hover:text-orange-400 transition">Habilidades</a>
+        <a href="#proyectos" class="hover:text-orange-400 transition">Proyectos</a>
+        <a href="#contacto" class="hover:text-orange-400 transition">Contacto</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href="#contacto" class="hidden sm:inline-block glow-button px-5 py-2.5 rounded-full text-sm font-bold text-white">
+          Hablemos ↗
+        </a>
+        <button id="menu-btn" aria-label="Abrir menú" class="md:hidden p-2 rounded-xl border border-white/15 text-gray-300 hover:text-white hover:border-orange-400 transition">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-[#150C15] border-b border-white/10 px-6 py-5 space-y-3">
+      <a href="#inicio" class="block py-2 text-gray-300 hover:text-orange-400 font-medium">Inicio</a>
+      <a href="#sobre-mi" class="block py-2 text-gray-300 hover:text-orange-400 font-medium">Sobre mí</a>
+      <a href="#habilidades" class="block py-2 text-gray-300 hover:text-orange-400 font-medium">Habilidades</a>
+      <a href="#proyectos" class="block py-2 text-gray-300 hover:text-orange-400 font-medium">Proyectos</a>
+      <a href="#contacto" class="block py-2 text-orange-400 font-bold">Contacto ↗</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="min-h-screen flex items-center relative overflow-hidden pt-28 pb-16">
+      <div class="absolute top-20 right-0 w-96 h-96 hero-glow blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
+        <div>
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400 text-xs font-bold tracking-widest mb-7">
+            <span class="w-2 h-2 rounded-full bg-orange-400 animate-pulse"></span>
+            EN PROCESO DE SER DESARROLLADOR · RIWI
+          </span>
+
+          <h1 class="text-5xl md:text-7xl font-black leading-tight mb-6 text-white">
+            Hola, soy
+            <span class="gradient-text">Francisco.</span>
+          </h1>
+
+          <p class="text-gray-300 text-lg leading-relaxed max-w-lg mb-8">
+            Bueno en lo que hago y metiéndole toda la moral al desarrollo de software en <span class="text-white font-semibold">Riwi</span>. Me gusta construir soluciones digitales funcionales desde cero, tirando código limpio y aprendiendo algo nuevo todos los días. ¡Sisabe!
+          </p>
+
+          <div class="flex flex-wrap gap-4">
+            <a href="#proyectos" class="glow-button px-7 py-4 rounded-full font-bold text-white">
+              Ver proyectos ↗
+            </a>
+            <a href="#sobre-mi" class="px-7 py-4 rounded-full border border-white/20 text-white hover:border-orange-400 hover:bg-white/5 transition font-semibold">
+              Conocer más ↓
+            </a>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-6 mt-12 text-gray-400 text-sm font-medium">
+            <a href="https://github.com/salgadofrancisco920?tab=repositories" target="_blank" rel="noopener noreferrer" class="hover:text-orange-400 transition flex items-center gap-2">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/></svg>
+              GitHub
+            </a>
+            <button type="button" data-copy-email class="hover:text-orange-400 transition flex items-center gap-2 cursor-pointer">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+              <span class="copy-label">salgadofrancisco920@gmail.com</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="relative flex justify-center">
+          <div class="absolute inset-0 rounded-full hero-glow blur-3xl pointer-events-none"></div>
+
+          <div class="relative w-72 h-80 md:w-96 md:h-[440px] rounded-3xl overflow-hidden gradient-border bg-inferno-card shadow-glow group">
+            <img
+              src="img/Fotodelballer.jpeg"
+              alt="Fotografía de Francisco"
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-[#100910] via-[#100910]/20 to-transparent"></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <p class="text-orange-400 text-xs font-bold tracking-widest mb-1">
+                CONSTRUYENDO CAMINO
+              </p>
+              <p class="text-xl font-bold leading-snug text-white">Centrado en dar el paso y dejar la huella.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre-mi" class="py-28 border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-start">
+        <div class="lg:col-span-7">
+          <p class="text-orange-400 font-bold tracking-widest text-sm mb-4">
+            01 / SOBRE MÍ
+          </p>
+          <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">
+            Un joven apasionado por el <span class="gradient-text">código.</span>
+          </h2>
+          <div class="space-y-5 text-gray-300 text-lg leading-relaxed">
+            <p>
+              Soy Francisco, un chico sencillo, muy creativo y con buen sentido del humor. Estoy en pleno proceso de convertirme en desarrollador de software en <span class="text-white font-semibold">Riwi</span>. Me mueve entender cómo funcionan las cosas por dentro y transformar ideas en proyectos reales que sirvan de verdad.
+            </p>
+            <p>
+              No le corro a los retos: me gusta untarme de lógica, estructura web, terminal y buenas prácticas para que cada entrega quede bien hecha y con toda la actitud. ¡Sisabe y eso que esto apenas comienza!
+            </p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 space-y-5">
+          <div class="gradient-border bg-inferno-card rounded-3xl p-7">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold tracking-widest text-orange-400 uppercase">Formación Actual</span>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-orange-500/15 text-orange-300">2026</span>
+            </div>
+            <h3 class="text-xl font-bold text-white">Desarrollo de Software</h3>
+            <p class="text-sm text-pink-400 font-semibold mt-1">Riwi — Centro de Entrenamiento</p>
+            <p class="text-gray-300 text-sm mt-3 leading-relaxed">
+              Entrenamiento intensivo basado en proyectos reales: lógica de programación, desarrollo web, control de versiones con Git y trabajo en equipo bajo presión.
+            </p>
+          </div>
+
+          <div class="gradient-border bg-inferno-card rounded-3xl p-7">
+            <span class="text-xs font-bold tracking-widest text-orange-400 uppercase">Mentalidad</span>
+            <h3 class="text-xl font-bold text-white mt-2">Código limpio y soluciones reales</h3>
+            <p class="text-gray-300 text-sm mt-2 leading-relaxed">
+              Me enfoco en escribir código ordenado, entendible y adaptable a cualquier pantalla, cuidando tanto la lógica como la experiencia de quien usa la plataforma.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="habilidades" class="py-28 bg-white/[0.02] border-y border-white/10">
+      <div class="max-w-7xl mx-auto px-6">
+        <p class="text-orange-400 font-bold tracking-widest text-sm mb-4">
+          02 / TECNOLOGÍAS
+        </p>
+        <h2 class="text-4xl md:text-5xl font-black mb-12 text-white">
+          Mi caja de <span class="gradient-text">herramientas.</span>
+        </h2>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
+          <div class="gradient-border bg-inferno-card rounded-2xl p-6 hover:-translate-y-2 hover:shadow-glow transition duration-300">
+            <p class="text-3xl mb-4">🌐</p>
+            <h3 class="font-bold text-lg text-white">HTML5</h3>
+            <p class="text-gray-300 text-xs mt-1.5">Estructura semántica</p>
+          </div>
+
+          <div class="gradient-border bg-inferno-card rounded-2xl p-6 hover:-translate-y-2 hover:shadow-glow transition duration-300">
+            <p class="text-3xl mb-4">🎨</p>
+            <h3 class="font-bold text-lg text-white">CSS3</h3>
+            <p class="text-gray-300 text-xs mt-1.5">Diseño y layouts</p>
+          </div>
+
+          <div class="gradient-border bg-inferno-card rounded-2xl p-6 hover:-translate-y-2 hover:shadow-glow transition duration-300">
+            <p class="text-3xl mb-4">💨</p>
+            <h3 class="font-bold text-lg text-white">Tailwind</h3>
+            <p class="text-gray-300 text-xs mt-1.5">Estilos ágiles y modernos</p>
+          </div>
+
+          <div class="gradient-border bg-inferno-card rounded-2xl p-6 hover:-translate-y-2 hover:shadow-glow transition duration-300">
+            <p class="text-3xl mb-4">⚡</p>
+            <h3 class="font-bold text-lg text-white">JavaScript</h3>
+            <p class="text-gray-300 text-xs mt-1.5">Lógica e interactividad</p>
+          </div>
+
+          <div class="gradient-border bg-inferno-card rounded-2xl p-6 hover:-translate-y-2 hover:shadow-glow transition duration-300">
+            <p class="text-3xl mb-4">🔀</p>
+            <h3 class="font-bold text-lg text-white">Git & GitHub</h3>
+            <p class="text-gray-300 text-xs mt-1.5">Control de versiones</p>
+          </div>
+
+          <div class="gradient-border bg-inferno-card rounded-2xl p-6 hover:-translate-y-2 hover:shadow-glow transition duration-300">
+            <p class="text-3xl mb-4">🐧</p>
+            <h3 class="font-bold text-lg text-white">Linux</h3>
+            <p class="text-gray-300 text-xs mt-1.5">Terminal y entorno</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos" class="py-28">
+      <div class="max-w-7xl mx-auto px-6">
+        <p class="text-orange-400 font-bold tracking-widest text-sm mb-4">
+          03 / PORTAFOLIO
+        </p>
+        <h2 class="text-4xl md:text-5xl font-black mb-4 text-white">
+          Proyectos <span class="gradient-text">construidos.</span>
+        </h2>
+        <p class="text-gray-300 mb-12 max-w-2xl">
+          Cada proyecto aquí es código real desplegado, pensado para resolver necesidades concretas con buena estructura y experiencia fluida.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Proyecto 1: Rueda Libre -->
+          <article class="gradient-border bg-inferno-card rounded-3xl overflow-hidden group flex flex-col justify-between">
+            <div>
+              <div class="h-56 relative overflow-hidden bg-gradient-to-br from-orange-500 via-red-500 to-pink-600">
+                <!-- Cambia la ruta en src="" por la de tu captura de Rueda Libre -->
+                <img
+                  src="img/ruedalibre.png"
+                  alt="Vista previa de Rueda Libre"
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500"
+                >
+                <span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-xs font-bold text-white">
+                  En línea
+                </span>
+              </div>
+
+              <div class="p-8">
+                <span class="text-orange-400 text-xs font-bold tracking-wider">PLATAFORMA WEB</span>
+                <h3 class="text-2xl font-bold mt-2 text-white">Rueda Libre</h3>
+                <p class="text-gray-300 mt-3 leading-relaxed">
+                  Plataforma completa para alquiler de bicicletas urbanas: catálogo de servicios, planes y tarifas claras, rutas nocturnas por la ciudad y flujo de reservas interactivo.
+                </p>
+                <div class="flex flex-wrap gap-2 mt-6">
+                  <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-orange-300">HTML5</span>
+                  <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-orange-300">CSS3</span>
+                  <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-orange-300">JavaScript</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="px-8 pb-8 pt-2 flex gap-4">
+              <a href="https://salgadofrancisco920.github.io/rueda-libre/" target="_blank" rel="noopener noreferrer" class="glow-button flex-1 text-center py-3 rounded-xl text-sm font-bold text-white">
+                Ver proyecto ↗
+              </a>
+              <a href="https://github.com/salgadofrancisco920/rueda-libre" target="_blank" rel="noopener noreferrer" class="flex-1 text-center py-3 rounded-xl border border-white/15 text-white hover:border-orange-400 text-sm font-semibold transition">
+                Código GitHub
+              </a>
+            </div>
+          </article>
+          
+          <article class="gradient-border bg-inferno-card rounded-3xl overflow-hidden group flex flex-col justify-between">
+            <div>
+              <div class="h-56 relative overflow-hidden bg-gradient-to-br from-red-600 via-pink-600 to-purple-800">
+                <img
+                  src="img/sismoo.png"
+                  alt="Vista previa de SismoTwin"
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500"
+                >
+                <span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-xs font-bold text-white">
+                  En línea · Colaborativo
+                </span>
+              </div>
+
+              <div class="p-8">
+                <span class="text-orange-400 text-xs font-bold tracking-wider">SIMULACIÓN & IA</span>
+                <h3 class="text-2xl font-bold mt-2 text-white">SismoTwin</h3>
+                <p class="text-gray-300 mt-3 leading-relaxed">
+                  Aplicación web interactiva desarrollada en equipo que integra inteligencia artificial para simular escenarios sísmicos, analizar riesgos y visualizar datos clave de prevención en tiempo real.
+                </p>
+                <div class="flex flex-wrap gap-2 mt-6">
+                  <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-orange-300">HTML5</span>
+                  <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-orange-300">CSS3</span>
+                  <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-orange-300">JavaScript</span>
+                  <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-orange-300">IA</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="px-8 pb-8 pt-2 flex gap-4">
+              <a href="https://dahiana21.github.io/SismoTwin-Actividad-IA/" target="_blank" rel="noopener noreferrer" class="glow-button flex-1 text-center py-3 rounded-xl text-sm font-bold text-white">
+                Ver proyecto ↗
+              </a>
+              <a href="https://github.com/salgadofrancisco920/SismoTwin-Actividad-IA" target="_blank" rel="noopener noreferrer" class="flex-1 text-center py-3 rounded-xl border border-white/15 text-white hover:border-orange-400 text-sm font-semibold transition">
+                Código GitHub
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="py-28 border-t border-white/10">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="gradient-border bg-inferno-card rounded-3xl p-8 md:p-14 text-center relative overflow-hidden">
+          <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-80 h-80 hero-glow blur-3xl pointer-events-none"></div>
+
+          <p class="text-orange-400 font-bold tracking-widest text-sm mb-4 relative z-10">
+            04 / CONTACTO
+          </p>
+          <h2 class="text-4xl md:text-5xl font-black mb-5 text-white relative z-10">
+            ¿Hablamos y armamos <span class="gradient-text">algo bueno?</span>
+          </h2>
+          <p class="text-gray-300 text-lg max-w-xl mx-auto mb-10 relative z-10">
+            Si tienes una idea, un proyecto colaborativo o quieres conectar en el mundo tech, escríbeme de una que aquí estamos firmes.
+          </p>
+
+          <form id="contact-form" action="https://formspree.io/f/xdegkpnl" method="POST" class="max-w-lg mx-auto space-y-4 text-left relative z-10 mb-8">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <input type="text" name="nombre" required placeholder="Tu nombre" class="w-full px-4 py-3.5 rounded-xl bg-[#100910] border border-white/15 text-white placeholder-gray-400 focus:outline-none focus:border-orange-400 transition">
+              <input type="email" name="email" required placeholder="Tu correo" class="w-full px-4 py-3.5 rounded-xl bg-[#100910] border border-white/15 text-white placeholder-gray-400 focus:outline-none focus:border-orange-400 transition">
+            </div>
+            <textarea name="mensaje" rows="3" required placeholder="Cuéntame qué tienes en mente..." class="w-full px-4 py-3.5 rounded-xl bg-[#100910] border border-white/15 text-white placeholder-gray-400 focus:outline-none focus:border-orange-400 transition"></textarea>
+            <button id="submit-btn" type="submit" class="glow-button w-full py-4 rounded-xl font-bold text-white cursor-pointer">
+              Enviar mensaje ↗
+            </button>
+            <p id="form-status" class="hidden text-center text-sm font-semibold pt-2"></p>
+          </form>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-3 text-sm text-gray-300 relative z-10">
+            <span>O copia mi correo con un clic:</span>
+            <button type="button" data-copy-email class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/15 hover:border-orange-400 text-orange-400 font-semibold transition cursor-pointer">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+              <span class="copy-label">salgadofrancisco920@gmail.com</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10 py-8">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-gray-400 text-sm">
+        © 2026 Francisco.dev · Todos los derechos reservados.
+      </p>
+      <p class="gradient-text font-bold text-sm">
+        Dispuesto a cambiar las reglas del juego ¡Sisabe!
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    const emailAddress = 'salgadofrancisco920@gmail.com';
+    document.querySelectorAll('[data-copy-email]').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const label = btn.querySelector('.copy-label');
+        try {
+          await navigator.clipboard.writeText(emailAddress);
+          label.textContent = '¡Correo copiado! ✓';
+          btn.classList.add('text-emerald-400');
+          setTimeout(() => {
+            label.textContent = emailAddress;
+            btn.classList.remove('text-emerald-400');
+          }, 2000);
+        } catch {
+          window.location.href = `mailto:${emailAddress}`;
+        }
+      });
+    });
+
+    const contactForm = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const formStatus = document.getElementById('form-status');
+
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Enviando mensaje...';
+      formStatus.classList.add('hidden');
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: contactForm.method,
+          body: new FormData(contactForm),
+          headers: { Accept: 'application/json' }
+        });
+
+        if (response.ok) {
+          formStatus.textContent = '¡Mensaje enviado! Gracias por escribir, te respondo pronto.';
+          formStatus.className = 'text-center text-sm font-semibold pt-2 text-emerald-400';
+          contactForm.reset();
+        } else {
+          formStatus.textContent = 'Hubo un problema al enviar. Copia mi correo arriba y escríbeme directo.';
+          formStatus.className = 'text-center text-sm font-semibold pt-2 text-red-400';
+        }
+      } catch (error) {
+        formStatus.textContent = 'Error de conexión. Intenta de nuevo o copia mi correo.';
+        formStatus.className = 'text-center text-sm font-semibold pt-2 text-red-400';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Enviar mensaje ↗';
+      }
+    });
+  </script>
+
+</body>
+</html>
